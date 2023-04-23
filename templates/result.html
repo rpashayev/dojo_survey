@@ -11,9 +11,12 @@
 <body>
     <div class="container flex justify-content-center col-sm-6 mt-5">
         <div class="card bg-primary p-4 text-light">
-            <h1 class="text-warning">{{ session['dojo_first_name'] }} {{ session['dojo_last_name'] }}</h1>
+            <h1 class="text-warning">{{ session['dojo_first_name'].title() }} {{ session['dojo_last_name'].title() }}</h1>
             <p>Dojo location: {{ session['dojo_city'] }}</p>
             <p>Favorite language: {{ session['dojo_language'] }}</p>
+            <p>Black belt?: {{ session['dojo_black_belt'].title() }}</p>
+            <p>Registered at GitHub?: {{ session['dojo_github_account'].title() }}</p>
+            <p>Favorite color: {{ session['dojo_fav_color'].title() }}</p>
             <p>Comment: {{ session['dojo_comment'] }}</p>
         </div>
     </div>
